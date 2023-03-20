@@ -6,7 +6,6 @@ const app = express();
 const port = process.env.PORT;
 
 //Handelbars
-
 hbs.registerPartials(__dirname + "/views/partials", (err) => {
   console.log(err);
 });
@@ -15,7 +14,6 @@ hbs.registerPartials(__dirname + "/views/partials", (err) => {
 app.set("view engine", "hbs");
 
 // Servir Contenido
-
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
